@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agenzia Immobiliare Cles — Case che raccontano un luogo</title>
+
+<meta name="description"
+      content="Agenzia Immobiliare Cles — immobili, territorio e persone nel cuore della Val di Non.">
+
+<style>
+/* =========================================================
+   AGENZIA IMMOBILIARE CLES
+   PREMIUM EDITORIAL CONCEPT
+   Nessuna immagine esterna utilizzata.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+    --forest: #17211b;
+    --forest-2: #26342b;
+    --cream: #f4f1e9;
+    --paper: #faf9f5;
+    --white: #ffffff;
+    --sand: #c7ad89;
+    --gold: #b38a5b;
+    --muted: #737b74;
+    --line: rgba(23,33,27,.13);
+
+    --serif: "DM Serif Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+
+    --radius: 28px;
+    --shadow: 0 30px 80px rgba(17,27,21,.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--forest);
+    font-family: var(--sans);
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.serif {
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+.eyebrow {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.text-light {
+    color: rgba(255,255,255,.65);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 0 21px;
+
+    border-radius: 100px;
+    border: 1px solid transparent;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-dark {
+    background: var(--forest);
+    color: white;
+}
+
+.btn-dark:hover {
+    box-shadow: 0 15px 35px rgba(23,33,27,.25);
+}
+
+.btn-light {
+    background: white;
+    color: var(--forest);
+}
+
+.btn-outline {
+    border-color: var(--line);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+}
+
+.btn-transparent {
+    background: rgba(255,255,255,.08);
+    color: white;
+    border-color: rgba(255,255,255,.3);
+}
+
+.btn-transparent:hover {
+    background: white;
+    color: var(--forest);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-nav {
+    position: fixed;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 23px 0;
+
+    color: white;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        padding .4s ease,
+        box-shadow .4s ease;
+}
+
+.site-nav.scrolled {
+    padding: 13px 0;
+
+    background: rgba(250,249,245,.92);
+    color: var(--forest);
+
+    backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 var(--line);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    font-family: var(--serif);
+    font-size: 23px;
+    line-height: .85;
+}
+
+.brand small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: var(--sans);
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .22em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    transition: width .3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-button {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.1);
+    color: inherit;
+
+    font-size: 20px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 920px;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 28%,
+            rgba(206,179,138,.5),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #27382c 0%,
+            #627263 52%,
+            #b9a689 100%
+        );
+
+    color: white;
+}
+
+/* Original CSS landscape */
+
+.hero-landscape {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.hero-sky {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 76% 25%,
+            rgba(255,232,191,.55),
+            transparent 10%
+        ),
+        linear-gradient(
+            180deg,
+            #6f806f 0%,
+            #aeb09b 48%,
+            #cbb99a 100%
+        );
+}
+
+.mountain {
+    position: absolute;
+    bottom: -3px;
+
+    width: 120%;
+    height: 65%;
+
+    background: var(--forest);
+
+    clip-path: polygon(
+        0 100%,
+        8% 70%,
+        19% 49%,
+        28% 67%,
+        43% 25%,
+        56% 62%,
+        67% 39%,
+        80% 68%,
+        92% 42%,
+        100% 65%,
+        100% 100%
+    );
+}
+
+.mountain.back {
+    bottom: 8%;
+    left: -10%;
+    height: 52%;
+    opacity: .25;
+    transform: scale(1.15);
+}
+
+.mountain.front {
+    right: -10%;
+    opacity: .75;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    padding-bottom: 115px;
+}
+
+.hero-copy-inner {
+    max-width: 870px;
+}
+
+.hero-title {
+    margin: 20px 0 28px;
+
+    font-family: var(--serif);
+    font-size: clamp(65px, 9vw, 125px);
+    font-weight: 400;
+    line-height: .84;
+    letter-spacing: -.055em;
+}
+
+.hero-title em {
+    color: #e0c39b;
+}
+
+.hero-description {
+    max-width: 580px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.hero-scroll {
+    position: absolute;
+
+    right: 28px;
+    bottom: 45px;
+
+    writing-mode: vertical-rl;
+
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+
+    color: rgba(255,255,255,.55);
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-wrapper {
+    position: relative;
+    z-index: 10;
+
+    margin-top: -55px;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns:
+        1.1fr
+        1fr
+        1fr
+        1fr
+        auto;
+
+    gap: 6px;
+
+    padding: 13px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 8px 15px;
+
+    border-right: 1px solid var(--line);
+}
+
+.search-field span {
+    margin-bottom: 5px;
+
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    color: var(--muted);
+}
+
+.search-field select {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--forest);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.search-submit {
+    border: 0;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    padding: 135px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 50px;
+
+    margin-bottom: 55px;
+}
+
+.section-title {
+    max-width: 700px;
+
+    margin: 13px 0 0;
+
+    font-family: var(--serif);
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: .94;
+
+    letter-spacing: -.035em;
+}
+
+.section-description {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   PROPERTY GRID
+   ========================================================= */
+
+.property-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.property-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    box-shadow: 0 8px 30px rgba(23,33,27,.035);
+
+    transition:
+        transform .45s cubic-bezier(.2,.7,.2,1),
+        box-shadow .45s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow);
+}
+
+.property-image {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #cdbd9e,
+        #667769
+    );
+}
+
+.property-card:nth-child(2) .property-image {
+    background:
+        linear-gradient(145deg,#d8d0c1,#839184);
+}
+
+.property-card:nth-child(3) .property-image {
+    background:
+        linear-gradient(145deg,#a68c6d,#506458);
+}
+
+.property-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(0,0,0,.35)
+        );
+}
+
+.property-mountain {
+    position: absolute;
+
+    left: -10%;
+    bottom: -5%;
+
+    width: 120%;
+    height: 65%;
+
+    background: #26362c;
+
+    clip-path: polygon(
+        0 100%,
+        20% 45%,
+        35% 65%,
+        52% 25%,
+        70% 61%,
+        85% 39%,
+        100% 63%,
+        100% 100%
+    );
+}
+
+.property-house {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 50%;
+    bottom: 45px;
+
+    width: 45%;
+    height: 30%;
+
+    transform: translateX(-50%);
+
+    background: #dfcfb1;
+
+    clip-path: polygon(
+        50% 0,
+        100% 32%,
+        100% 100%,
+        0 100%,
+        0 32%
+    );
+
+    box-shadow: 0 15px 30px rgba(0,0,0,.18);
+}
+
+.property-badge {
+    position: absolute;
+    z-index: 5;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 8px 12px;
+
+    background: white;
+
+    border-radius: 100px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.property-info {
+    padding: 23px;
+}
+
+.property-price {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.property-name {
+    margin: 0 0 8px;
+
+    font-family: var(--serif);
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.property-location {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.property-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    padding-top: 17px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.property-open {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--forest);
+    color: white;
+
+    transition: transform .3s ease;
+}
+
+.property-card:hover .property-open {
+    transform: rotate(45deg);
+}
+
+/* =========================================================
+   FEATURE PROPERTY
+   ========================================================= */
+
+.feature {
+    display: grid;
+
+    grid-template-columns: 1.08fr .92fr;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+
+    background: var(--forest);
+    color: white;
+}
+
+.feature-visual {
+    position: relative;
+
+    min-height: 580px;
+
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(230,204,163,.55),
+            transparent 18%
+        ),
+        linear-gradient(
+            145deg,
+            #bba17a,
+            #4f6254
+        );
+}
+
+.feature-visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(23,33,27,.85)
+        );
+}
+
+.feature-mountain {
+    position: absolute;
+
+    bottom: 0;
+    left: -10%;
+
+    width: 120%;
+    height: 67%;
+
+    background: #17211b;
+
+    clip-path: polygon(
+        0 100%,
+        18% 44%,
+        35% 65%,
+        53% 19%,
+        70% 57%,
+        84% 37%,
+        100% 61%,
+        100% 100%
+    );
+}
+
+.feature-house {
+    position: absolute;
+    z-index: 2;
+
+    left: 20%;
+    bottom: 80px;
+
+    width: 44%;
+    height: 29%;
+
+    background: #ddc9a6;
+
+    clip-path: polygon(
+        50% 0,
+        100% 34%,
+        100% 100%,
+        0 100%,
+        0 34%
+    );
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 75px;
+}
+
+.feature-title {
+    max-width: 550px;
+
+    margin: 18px 0 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: .92;
+}
+
+.feature-description {
+    max-width: 490px;
+
+    color: rgba(255,255,255,.63);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.specs {
+    display: flex;
+    gap: 32px;
+
+    margin: 30px 0;
+}
+
+.spec b {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 20px;
+}
+
+.spec span {
+    font-size: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: .14em;
+
+    color: rgba(255,255,255,.45);
+}
+
+/* =========================================================
+   AGENCY STORY
+   ========================================================= */
+
+.story {
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    gap: 110px;
+
+    align-items: start;
+}
+
+.story-title {
+    margin: 13px 0 0;
+
+    font-family: var(--serif);
+    font-size: clamp(46px, 5vw, 72px);
+    line-height: .93;
+}
+
+.story-text {
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 30px;
+
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 34px;
+}
+
+.values {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    margin-top: 55px;
+}
+
+.value {
+    padding-top: 17px;
+
+    border-top: 1px solid var(--line);
+}
+
+.value-number {
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: .15em;
+}
+
+.value h3 {
+    margin: 12px 0 7px;
+
+    font-size: 14px;
+}
+
+.value p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    border: 1px solid var(--line);
+}
+
+.service {
+    min-height: 290px;
+
+    padding: 38px;
+
+    border-right: 1px solid var(--line);
+
+    transition: background .3s ease;
+}
+
+.service:last-child {
+    border-right: 0;
+}
+
+.service:hover {
+    background: white;
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.service h3 {
+    margin: 70px 0 12px;
+
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.service p {
+    max-width: 320px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   SELL CTA
+   ========================================================= */
+
+.sell-section {
+    padding-bottom: 135px;
+}
+
+.sell-box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    padding: 80px;
+
+    border-radius: 35px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255,255,255,.55),
+            transparent 25%
+        ),
+        #d9d0c0;
+}
+
+.sell-title {
+    margin: 15px 0 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: .9;
+}
+
+.sell-text {
+    max-width: 500px;
+
+    color: #5f685f;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 25px 60px rgba(23,33,27,.1);
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 11px;
+}
+
+.form-field {
+    padding: 13px 14px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 13px;
+}
+
+.form-field.full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .13em;
+
+    color: var(--muted);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    resize: vertical;
+
+    background: transparent;
+
+    color: var(--forest);
+
+    font-size: 13px;
+}
+
+.form-field textarea {
+    min-height: 90px;
+}
+
+.form-submit {
+    width: 100%;
+
+    margin-top: 12px;
+
+    border: 0;
+}
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.quote {
+    padding: 115px 0;
+
+    text-align: center;
+}
+
+.quote-text {
+    max-width: 900px;
+
+    margin: 18px auto 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(38px, 5vw, 67px);
+    line-height: 1.04;
+}
+
+.quote-author {
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    color: var(--muted);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 80px 0 30px;
+
+    background: var(--forest);
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-brand {
+    font-family: var(--serif);
+    font-size: 44px;
+}
+
+.footer-description {
+    max-width: 390px;
+
+    margin-top: 18px;
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    gap: 65px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 12px;
+}
+
+.footer-column strong {
+    margin-bottom: 8px;
+
+    color: white;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 65px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    color: rgba(255,255,255,.35);
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal {
+    position: fixed;
+    z-index: 500;
+
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(10,15,12,.82);
+
+    backdrop-filter: blur(12px);
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-window {
+    position: relative;
+
+    width: min(900px,100%);
+    max-height: 90vh;
+
+    overflow: auto;
+
+    border-radius: 30px;
+
+    background: var(--paper);
+}
+
+.modal-visual {
+    position: relative;
+
+    height: 310px;
+
+    overflow: hidden;
+
+    background: linear-gradient(145deg,#bca47e,#566a59);
+}
+
+.modal-visual .property-mountain {
+    bottom: -2px;
+}
+
+.modal-close {
+    position: absolute;
+    z-index: 10;
+
+    top: 17px;
+    right: 17px;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--forest);
+
+    font-size: 22px;
+}
+
+.modal-content {
+    padding: 38px;
+}
+
+.modal-content h2 {
+    margin: 10px 0 18px;
+
+    font-family: var(--serif);
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.modal-content p {
+    max-width: 680px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.toast {
+    position: fixed;
+    z-index: 1000;
+
+    left: 50%;
+    bottom: 25px;
+
+    padding: 14px 20px;
+
+    border-radius: 100px;
+
+    background: var(--forest);
+    color: white;
+
+    font-size: 12px;
+
+    transform:
+        translate(-50%,120px);
+
+    transition: transform .4s ease;
+}
+
+.toast.show {
+    transform: translate(-50%,0);
+}
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    position: fixed;
+    z-index: 90;
+
+    inset: 0;
+
+    display: none;
+
+    padding: 110px 30px 40px;
+
+    background: var(--forest);
+    color: white;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+
+    font-family: var(--serif);
+    font-size: 34px;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(100% - 30px, 720px);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right .btn {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        min-height: 800px;
+    }
+
+    .hero-title {
+        font-size: clamp(57px,13vw,90px);
+    }
+
+    .search-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-field {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .search-submit {
+        grid-column: 1 / -1;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-image {
+        height: 390px;
+    }
+
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-visual {
+        min-height: 430px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        border: 0;
+        gap: 12px;
+    }
+
+    .service {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+    }
+
+    .sell-box {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding: 40px 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .section-header {
+        display: block;
+    }
+
+    .section-description {
+        margin-top: 25px;
+    }
+
+    .hero {
+        min-height: 740px;
+    }
+
+    .hero-copy {
+        padding-bottom: 75px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .search-submit {
+        grid-column: auto;
+    }
+
+    .feature-content {
+        padding: 45px 28px;
+    }
+
+    .feature-visual {
+        min-height: 330px;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full {
+        grid-column: auto;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-content h2 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+
+<nav class="site-nav" id="siteNav">
+
+    <div class="container nav-inner">
+
+        <a href="#" class="brand">
+            Agenzia Immobiliare
+            <small>Cles · Val di Non</small>
+        </a>
+
+        <div class="nav-links">
+            <a href="#immobili">Immobili</a>
+            <a href="#agenzia">L'agenzia</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#vendi">Vendi</a>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="#vendi" class="btn btn-transparent">
+                Valuta il tuo immobile
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Apri menu">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- =========================================================
+     MOBILE MENU
+     ========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#immobili">Immobili</a>
+    <a href="#agenzia">L'agenzia</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#vendi">Vendi il tuo immobile</a>
+
+</div>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<header class="hero">
+
+    <div class="hero-landscape">
+
+        <div class="hero-sky"></div>
+
+        <div class="mountain back"></div>
+        <div class="mountain front"></div>
+
+    </div>
+
+    <div class="container hero-copy">
+
+        <div class="hero-copy-inner reveal">
+
+            <div class="eyebrow text-light">
+                Immobiliare · Cles · Val di Non
+            </div>
+
+            <h1 class="hero-title">
+                Case che<br>
+                raccontano un <em>luogo.</em>
+            </h1>
+
+            <p class="hero-description">
+                Non cerchiamo semplicemente immobili.
+                Cerchiamo il posto giusto in cui una nuova storia
+                possa cominciare.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#immobili" class="btn btn-light">
+                    Scopri gli immobili
+                    <span>↗</span>
+                </a>
+
+                <a href="#agenzia" class="btn btn-transparent">
+                    Conosci l'agenzia
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        Scorri per esplorare ↓
+    </div>
+
+</header>
+
+<!-- =========================================================
+     SEARCH
+     ========================================================= -->
+
+<div class="container search-wrapper reveal">
+
+    <form class="search-box" id="searchForm">
+
+        <div class="search-field">
+
+            <span>Operazione</span>
+
+            <select id="operation">
+                <option value="all">Tutte</option>
+                <option value="vendita">Vendita</option>
+                <option value="affitto">Affitto</option>
+            </select>
+
+        </div>
+
+        <div class="search-field">
+
+            <span>Tipologia</span>
+
+            <select id="type">
+                <option value="all">Tutte</option>
+                <option value="casa">Casa</option>
+                <option value="appartamento">Appartamento</option>
+                <option value="rustico">Rustico</option>
+            </select>
+
+        </div>
+
+        <div class="search-field">
+
+            <span>Zona</span>
+
+            <select id="zone">
+                <option value="all">Tutta la Val di Non</option>
+                <option value="cles">Cles</option>
+                <option value="tuenno">Tuenno</option>
+                <option value="taio">Taio</option>
+            </select>
+
+        </div>
+
+        <div class="search-field">
+
+            <span>Budget</span>
+
+            <select id="budget">
+                <option value="all">Qualsiasi</option>
+                <option value="250">Fino a €250.000</option>
+                <option value="400">Fino a €400.000</option>
+                <option value="600">Fino a €600.000</option>
+            </select>
+
+        </div>
+
+        <button class="btn btn-dark search-submit">
+            Cerca immobili
+        </button>
+
+    </form>
+
+</div>
+
+<main>
+
+<!-- =========================================================
+     PROPERTIES
+     ========================================================= -->
+
+<section class="section" id="immobili">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div>
+
+                <div class="eyebrow">
+                    Una selezione
+                </div>
+
+                <h2 class="section-title">
+                    Immobili con qualcosa
+                    da raccontare.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Una vetrina curata per presentare ogni proprietà
+                non soltanto attraverso metri quadrati e numeri,
+                ma attraverso il modo in cui può essere vissuta.
+            </p>
+
+        </div>
+
+        <div class="property-grid" id="propertyGrid"></div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FEATURE
+     ========================================================= -->
+
+<section class="section" style="padding-top:0">
+
+    <div class="container">
+
+        <div class="feature reveal">
+
+            <div class="feature-visual">
+
+                <div class="feature-mountain"></div>
+                <div class="feature-house"></div>
+
+            </div>
+
+            <div class="feature-content">
+
+                <div class="eyebrow text-light">
+                    Immobile in evidenza · Cles
+                </div>
+
+                <h2 class="feature-title">
+                    La casa dove
+                    il paesaggio entra
+                    dalle finestre.
+                </h2>
+
+                <p class="feature-description">
+                    Una residenza pensata per chi desidera spazio,
+                    luce e il ritmo tranquillo della Val di Non.
+                    Una presentazione editoriale che mette al centro
+                    non solo la proprietà, ma il modo in cui si vive.
+                </p>
+
+                <div class="specs">
+
+                    <div class="spec">
+                        <b>178 m²</b>
+                        <span>Superficie</span>
+                    </div>
+
+                    <div class="spec">
+                        <b>5</b>
+                        <span>Locali</span>
+                    </div>
+
+                    <div class="spec">
+                        <b>2</b>
+                        <span>Bagni</span>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <button
+                        class="btn btn-transparent"
+                        onclick="openProperty(1)">
+                        Esplora la proprietà ↗
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     AGENCY
+     ========================================================= -->
+
+<section class="section" id="agenzia">
+
+    <div class="container story">
+
+        <div class="reveal">
+
+            <div class="eyebrow">
+                L'agenzia
+            </div>
+
+            <h2 class="story-title">
+                Conoscere una casa
+                significa conoscere
+                il suo territorio.
+            </h2>
+
+        </div>
+
+        <div class="reveal">
+
+            <p class="story-text">
+                A Cles, nel cuore della Val di Non, ogni immobile
+                ha un contesto, una luce, una storia.
+                L'obiettivo di questa identità digitale è trasformare
+                questa conoscenza locale in un'esperienza elegante,
+                personale e credibile.
+            </p>
+
+            <div class="signature">
+                Marisa Torresani
+            </div>
+
+            <div class="values">
+
+                <div class="value">
+                    <div class="value-number">01</div>
+                    <h3>Conoscenza locale</h3>
+                    <p>
+                        Un approccio costruito sulla familiarità
+                        con Cles e con il territorio.
+                    </p>
+                </div>
+
+                <div class="value">
+                    <div class="value-number">02</div>
+                    <h3>Relazione personale</h3>
+                    <p>
+                        Ascoltare le esigenze del cliente
+                        e accompagnarlo con chiarezza.
+                    </p>
+                </div>
+
+                <div class="value">
+                    <div class="value-number">03</div>
+                    <h3>Valore reale</h3>
+                    <p>
+                        Raccontare ogni proprietà mettendo
+                        in evidenza ciò che la rende speciale.
+                    </p>
+                </div>
+
+                <div class="value">
+                    <div class="value-number">04</div>
+                    <h3>Discrezione</h3>
+                    <p>
+                        Una comunicazione precisa, sobria
+                        e progettata per generare fiducia.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+
+<section class="section" id="servizi">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div>
+
+                <div class="eyebrow">
+                    Cosa facciamo
+                </div>
+
+                <h2 class="section-title">
+                    Un servizio immobiliare,
+                    dall'inizio alla firma.
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="services reveal">
+
+            <article class="service">
+
+                <div class="service-number">01</div>
+
+                <h3>Vendita</h3>
+
+                <p>
+                    Posizionamento, valorizzazione, presentazione
+                    e promozione dell'immobile per raggiungere
+                    il pubblico giusto.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <div class="service-number">02</div>
+
+                <h3>Acquisto</h3>
+
+                <p>
+                    Una ricerca guidata per trasformare desideri,
+                    esigenze e budget in una selezione concreta.
+                </p>
+
+            </article>
+
+            <article class="service">
+
+                <div class="service-number">03</div>
+
+                <h3>Valutazione</h3>
+
+                <p>
+                    Un primo confronto per capire il potenziale
+                    dell'immobile e il suo corretto posizionamento.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SELL
+     ========================================================= -->
+
+<section class="sell-section" id="vendi">
+
+    <div class="container">
+
+        <div class="sell-box reveal">
+
+            <div>
+
+                <div class="eyebrow">
+                    Hai una proprietà?
+                </div>
+
+                <h2 class="sell-title">
+                    Cominciamo
+                    dal suo
+                    vero valore.
+                </h2>
+
+                <p class="sell-text">
+                    Raccontaci qualcosa del tuo immobile.
+                    Ti ricontatteremo per un primo confronto,
+                    senza impegno.
+                </p>
+
+            </div>
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label>Nome</label>
+
+                        <input
+                            required
+                            type="text"
+                            placeholder="Il tuo nome">
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label>Telefono</label>
+
+                        <input
+                            required
+                            type="tel"
+                            placeholder="+39 ...">
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            placeholder="nome@email.it">
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label>Comune</label>
+
+                        <input
+                            type="text"
+                            placeholder="Cles / Val di Non">
+
+                    </div>
+
+                    <div class="form-field full">
+
+                        <label>Raccontaci l'immobile</label>
+
+                        <textarea
+                            placeholder="Casa, appartamento, rustico..."></textarea>
+
+                    </div>
+
+                </div>
+
+                <button class="btn btn-dark form-submit">
+                    Richiedi un primo contatto ↗
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     QUOTE
+     ========================================================= -->
+
+<section class="quote">
+
+    <div class="container reveal">
+
+        <div class="eyebrow">
+            Una promessa semplice
+        </div>
+
+        <div class="quote-text">
+            “La casa giusta non è solo
+            quella che ti piace.
+            È quella in cui riesci già
+            a immaginare la tua vita.”
+        </div>
+
+        <div class="quote-author">
+            Agenzia Immobiliare Cles
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <div class="footer-brand">
+                    Agenzia<br>
+                    Immobiliare Cles
+                </div>
+
+                <p class="footer-description">
+                    Un'identità digitale pensata per raccontare
+                    immobili, persone e territorio con più valore.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <div class="footer-column">
+
+                    <strong>Esplora</strong>
+
+                    <a href="#immobili">Immobili</a>
+                    <a href="#agenzia">L'agenzia</a>
+                    <a href="#servizi">Servizi</a>
+                    <a href="#vendi">Vendi</a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <strong>Contatti</strong>
+
+                    <a href="tel:+390463424389">
+                        0463 424389
+                    </a>
+
+                    <a href="mailto:agenziaimmobiliarecles@gmail.com">
+                        Email
+                    </a>
+
+                    <span>
+                        Cles · Trentino
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Agenzia Immobiliare Cles
+            </span>
+
+            <span>
+                Concept digitale · Privacy · Cookie
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     PROPERTY MODAL
+     ========================================================= -->
+
+<div class="modal" id="propertyModal">
+
+    <div class="modal-window">
+
+        <div class="modal-visual">
+
+            <div class="property-mountain"></div>
+            <div class="property-house"></div>
+
+            <button
+                class="modal-close"
+                onclick="closeProperty()">
+                ×
+            </button>
+
+        </div>
+
+        <div class="modal-content">
+
+            <div class="eyebrow">
+                Cles · Immobile in evidenza
+            </div>
+
+            <h2>
+                Casa panoramica
+                nel cuore della valle
+            </h2>
+
+            <p>
+                Questa è una scheda dimostrativa del concept.
+                In produzione questa pagina può contenere
+                fotografie autorizzate, planimetrie, video,
+                caratteristiche complete, mappa, documentazione
+                e richiesta visita.
+            </p>
+
+            <div class="specs">
+
+                <div class="spec">
+                    <b>€498.000</b>
+                    <span>Prezzo</span>
+                </div>
+
+                <div class="spec">
+                    <b>178 m²</b>
+                    <span>Superficie</span>
+                </div>
+
+                <div class="spec">
+                    <b>5</b>
+                    <span>Locali</span>
+                </div>
+
+            </div>
+
+            <a
+                href="#vendi"
+                onclick="closeProperty()"
+                class="btn btn-dark">
+                Richiedi informazioni ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast">
+    Richiesta ricevuta. Il modulo è pronto per essere collegato
+    a email, CRM o WhatsApp.
+</div>
+
+<script>
+
+/* =========================================================
+   DATI DEMO IMMOBILI
+   ========================================================= */
+
+const properties = [
+
+    {
+        id: 1,
+        operation: "vendita",
+        type: "casa",
+        zone: "cles",
+        price: 498000,
+        name: "Casa panoramica",
+        location: "Cles · Vista valle",
+        meta: "178 m² · 5 locali · 2 bagni"
+    },
+
+    {
+        id: 2,
+        operation: "vendita",
+        type: "appartamento",
+        zone: "cles",
+        price: 265000,
+        name: "Appartamento luminoso",
+        location: "Cles · Centro",
+        meta: "92 m² · 3 locali · Terrazza"
+    },
+
+    {
+        id: 3,
+        operation: "vendita",
+        type: "rustico",
+        zone: "tuenno",
+        price: 319000,
+        name: "Rustico contemporaneo",
+        location: "Tuenno · Val di Non",
+        meta: "154 m² · 4 locali · Giardino"
+    }
+
+];
+
+/* =========================================================
+   FORMAT PREZZI
+   ========================================================= */
+
+function formatPrice(price) {
+
+    return new Intl.NumberFormat(
+        "it-IT",
+        {
+            style: "currency",
+            currency: "EUR",
+            maximumFractionDigits: 0
+        }
+    ).format(price);
+
+}
+
+/* =========================================================
+   RENDER IMMOBILI
+   ========================================================= */
+
+function renderProperties(list = properties) {
+
+    const grid =
+        document.getElementById("propertyGrid");
+
+    if (!list.length) {
+
+        grid.innerHTML = `
+            <div style="
+                grid-column:1/-1;
+                padding:70px 20px;
+                text-align:center;
+                color:var(--muted);
+            ">
+                Nessun immobile corrisponde
+                ai filtri selezionati.
+            </div>
+        `;
+
+        return;
+    }
+
+    grid.innerHTML = list.map((property, index) => `
+
+        <article class="property-card reveal">
+
+            <div class="property-image">
+
+                <span class="property-badge">
+                    ${property.operation === "affitto"
+                        ? "Affitto"
+                        : "In vendita"}
+                </span>
+
+                <div class="property-mountain"></div>
+                <div class="property-house"></div>
+
+            </div>
+
+            <div class="property-info">
+
+                <div class="property-price">
+                    ${formatPrice(property.price)}
+                </div>
+
+                <h3 class="property-name">
+                    ${property.name}
+                </h3>
+
+                <div class="property-location">
+                    ${property.location}
+                </div>
+
+                <div class="property-bottom">
+
+                    <span>
+                        ${property.meta}
+                    </span>
+
+                    <button
+                        class="property-open"
+                        onclick="openProperty(${property.id})"
+                        aria-label="Apri immobile">
+                        ↗
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    `).join("");
+
+    observeReveal();
+
+}
+
+/* =========================================================
+   FILTRO IMMOBILI
+   ========================================================= */
+
+document
+    .getElementById("searchForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const operation =
+            document.getElementById("operation").value;
+
+        const type =
+            document.getElementById("type").value;
+
+        const zone =
+            document.getElementById("zone").value;
+
+        const budget =
+            document.getElementById("budget").value;
+
+        const filtered = properties.filter(property => {
+
+            const operationMatch =
+                operation === "all" ||
+                property.operation === operation;
+
+            const typeMatch =
+                type === "all" ||
+                property.type === type;
+
+            const zoneMatch =
+                zone === "all" ||
+                property.zone === zone;
+
+            const budgetMatch =
+                budget === "all" ||
+                property.price <= Number(budget) * 1000;
+
+            return (
+                operationMatch &&
+                typeMatch &&
+                zoneMatch &&
+                budgetMatch
+            );
+
+        });
+
+        renderProperties(filtered);
+
+        document
+            .getElementById("immobili")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    });
+
+/* =========================================================
+   MODAL IMMOBILE
+   ========================================================= */
+
+function openProperty(id) {
+
+    document
+        .getElementById("propertyModal")
+        .classList.add("active");
+
+    document.body.classList.add("no-scroll");
+
+}
+
+function closeProperty() {
+
+    document
+        .getElementById("propertyModal")
+        .classList.remove("active");
+
+    document.body.classList.remove("no-scroll");
+
+}
+
+document
+    .getElementById("propertyModal")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+            closeProperty();
+        }
+
+    });
+
+/* ESC per chiudere modal */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeProperty();
+    }
+
+});
+
+/* =========================================================
+   NAV SCROLL
+   ========================================================= */
+
+const nav =
+    document.getElementById("siteNav");
+
+window.addEventListener("scroll", function() {
+
+    nav.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+    );
+
+});
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", function() {
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+mobileMenu
+    .querySelectorAll("a")
+    .forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            mobileMenu.classList.remove("active");
+
+        });
+
+    });
+
+/* =========================================================
+   FORM DEMO
+   ========================================================= */
+
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const toast =
+            document.getElementById("toast");
+
+        toast.classList.add("show");
+
+        this.reset();
+
+        setTimeout(() => {
+
+            toast.classList.remove("show");
+
+        }, 4500);
+
+    });
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: .08
+    }
+
+);
+
+function observeReveal() {
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+}
+
+observeReveal();
+
+/* =========================================================
+   START
+   ========================================================= */
+
+renderProperties();
+
+</script>
+
+</body>
+</html>
